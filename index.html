@@ -12,7 +12,7 @@
     <header>
         <h1>To do List</h1>
         <form action="javascript:addTask()"  id="new-todo-form">
-            <input type="text" id="new-todo-input" placeholder="What do you want to do?"/>
+            <input type="text" onkeypress="return ((event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || event.charCode == 8 || event.charCode == 32 || (event.charCode >= 48 && event.charCode <= 57));" id="new-todo-input" placeholder="What do you want to do?"/>
             <input type="submit" id="newTaskSubmit" value="Add Task"/>
         </form>
     </header>
@@ -25,5 +25,17 @@
             </div>
         </section>
     </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content" >
+            <h3 id="deleteText">Are you sure you want to delete this task?</h3>
+            <p id="taskName">taskname</p>
+            <div class="clearfix">
+                <button id="cancel-confirm" onclick="cancelConfirm()">Cancel</button>
+                <button id="delete-confirm" onclick="confirmDelete()">Detele</button>
+            </div>
+        </div>
+    </div>
+  
 </body>
 </html>
