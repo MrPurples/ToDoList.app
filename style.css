@@ -95,6 +95,7 @@ main {
     padding: 1rem;
     border-radius:  1rem;
     margin-bottom: 1rem;
+    
 }
 
 
@@ -133,7 +134,24 @@ main {
     opacity: 0.6;
 }
 
-.task .actions .edit {
+.Save {
+    display: none;
+    background-image: linear-gradient(to right, rgb(247, 192, 200), rgb(248, 144, 248));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.edit{
+    display: block;
+}
+
+.task .actions .edit  {
     background-image: linear-gradient(to right, rgb(247, 192, 200), rgb(248, 144, 248));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -145,4 +163,76 @@ main {
     -webkit-text-fill-color: transparent;
 }
 
+#tasks{
+    flex-direction: column-reverse;
+    display: flex;
+}
+
+.content{
+    flex: 1 1 0%;
+}
+
+
+/* DELETE-MODAL */
+.modal {
+    box-sizing: border-box;
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: purple;
+    padding-top: 50px;
+}
+  
+.modal-content {
+    background-color: purple;
+    margin: 5% auto 15% auto; 
+    
+    width: 80%; 
+}
+.modal button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.modal button:hover{
+    opacity: 1;
+}
+
+#cancel-confirm, #delete-confirm{
+    float: left;
+    width: 50%;
+}
+
+#cancel-confirm {
+  background-color: #ccc;
+  color: black;
+}
+
+#delete-confirm{
+  background-color: #f44336;
+}
+
+.modal h3, p{
+    color: rgb(243, 231, 231)
+}
+.modal-content{
+  padding: 16px;
+  text-align: center;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 
