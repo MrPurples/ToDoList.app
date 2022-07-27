@@ -59,7 +59,6 @@ const getAllTasks = () => {
             }
             
         })
-        console.log(ourToDoList)
         document.getElementById(`arrowDown-${lastElem}`).style.display = 'none'
         document.getElementById('new-todo-input').value = '';
         
